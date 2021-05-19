@@ -1,0 +1,54 @@
+English: To create a module, first set a package name, which you will define.
+important because it will be the name of both your module, your manual file and your assets directory.
+For example, I will prepare a color module and I have a color.sh file.
+I put the color.sh in my hand into this directory and I need to write a manual file is the name of this file.
+It can only be color.man except that all other files and directories are assets to be opened for your module.
+directory, so for this example, in the /usr/share/modulesh/ modulesdir directory, add a color named color.
+will open the directory and send it into it. Your main module file is /usr/local/lib/ modulesh,
+Your manual file (if any) will be saved in the /usr/share/modulesh/ manuals directory as color.man.
+Open a directory called MODULESH in the main directory of your module and put this package name in a file called index.
+You must specify it in a variable named package. Here is the package you specified in the fine detail index file
+variable and the name of your module and manual file must be the same.
+ 
+
+Example of the base dir of module path:
+
+    before                  after
+    ./MODULESH        ->   /dev/null 
+    ./MODULESH/index  ->   /dev/null
+    ./color.sh        ->   /usr/local/lib/modulesh/color.sh
+    ./color.man       ->   /usr/share/modulesh/manuals/color.man
+    ./asset1.file     ->   /usr/share/modulesh/modulesdir/asset1.file
+    ./asset2.file     ->   /usr/share/modulesh/modulesdir/asset2.file
+
+Example of the index file:
+
+package="color"
+
+====================================================================================================
+
+Turkish: modül oluşturmak için öncelikle bir paket ismi belirleyin belirleyeceğiniz bu ismi
+önemlidir çünki hem modülünüzün hem manual dosyanızın hem de assets dizininizin adı olacaktır
+mesela color, color modülü hazırlayacağım ve elimde color.sh dosyam var şimdi boş bir dizin açıp
+elimdeki color.sh bu dizinin içine atıyorum ve bir manual dosyası yazmam gerekli bu dosyanın ismi
+yalnızca color.man olabilir onun dışında diğer tüm dosya ve dizinler mödülünüz için açılacak assets
+dizinine gönderilecektir yani bu örnek için /usr/share/modulesh/modulesdir dizinine color isimli bir
+dizin açıp onun içine gönderecektir. Ana modül dosyanız /usr/local/lib/modulesh, 
+manual dosyanız (eğer var ise) /usr/share/modulesh/manuals dizinine color.man şeklinde kaydolacaktır.
+bu paket ismini modülünüzün ana dizininde MODULESH diye bir dizin açıp içerisine index isimli bir dosyada
+package isimli bir değişkende belirtmelisiniz. Buradaki ince ayrıntı index dosyasında belirttiğiniz package
+değişkeni ile modül ve manual dosyanızın ismi aynı olmalıdır.
+
+Modül dizinin olması gerektiği gibi örneği:
+
+    sonra                  sonra
+    ./MODULESH        ->   /dev/null 
+    ./MODULESH/index  ->   /dev/null
+    ./color.sh        ->   /usr/local/lib/modulesh/color.sh
+    ./color.man       ->   /usr/share/modulesh/manuals/color.man
+    ./asset1.file     ->   /usr/share/modulesh/modulesdir/asset1.file
+    ./asset2.file     ->   /usr/share/modulesh/modulesdir/asset2.file
+
+İndex dosyasının örneği:
+
+package="color"
