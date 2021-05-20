@@ -32,13 +32,13 @@ case ${1} in
         chown ${SUDO_USER:-$USER}:${SUDO_USER:-$USER} /usr/share/modulesh/manuals/*
         chown ${SUDO_USER:-$USER}:${SUDO_USER:-$USER} /usr/local/lib/modulesh/ 
         chown ${SUDO_USER:-$USER}:${SUDO_USER:-$USER} /usr/local/lib/modulesh/*
-        echo "Okke"
+        echo "Installed."
     ;;
     [uU][nN][iI][nN][sS][tT][aA][lL][lL]|--[uU][nN][iI][nN][sS][tT][aA][lL][lL]|-[uU])
         [ -e /usr/bin/modulesh ] && rm /usr/bin/modulesh
         [ -d /usr/local/lib/modulesh ] && rm -rf /usr/local/lib/modulesh
         [ -d /usr/share/modulesh ] && rm -rf /usr/share/modulesh
-        echo "Okke"
+        echo "Uninstalled."
     ;;
     [rR][eE][iI][nN][sS][tT][aA][lL][lL]|--[rR][eE][iI][nN][sS][tT][aA][lL][lL]|-[rR])
         # uninstall
@@ -58,6 +58,9 @@ case ${1} in
         chown ${SUDO_USER:-$USER}:${SUDO_USER:-$USER} /usr/share/modulesh/manuals/*
         chown ${SUDO_USER:-$USER}:${SUDO_USER:-$USER} /usr/local/lib/modulesh/ 
         chown ${SUDO_USER:-$USER}:${SUDO_USER:-$USER} /usr/local/lib/modulesh/*
-        echo "Okke"
+        echo "Reinstalled."
+    ;;
+    *)
+        echo -e "for install the script then type 'sudo bash ${0} --install'\n or if you want to uninstall the script then type 'sudo bash ${0} --uninstall'\n also you can make remove and install with 'sudo bash ${0} --reinstall'"
     ;;
 esac
