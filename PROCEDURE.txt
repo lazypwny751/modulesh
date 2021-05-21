@@ -28,7 +28,7 @@ package="color"
 ====================================================================================================
 
 Turkish: modül oluşturmak için öncelikle bir paket ismi belirleyin belirleyeceğiniz bu ismi
-önemlidir çünki hem modülünüzün hem manual dosyanızın hem de assets dizininizin adı olacaktır
+önemlidir çünkü hem modülünüzün hem manual dosyanızın hem de assets dizininizin adı olacaktır
 mesela color, color modülü hazırlayacağım ve elimde color.sh dosyam var şimdi boş bir dizin açıp
 elimdeki color.sh bu dizinin içine atıyorum ve bir manual dosyası yazmam gerekli bu dosyanın ismi
 yalnızca color.man olabilir onun dışında diğer tüm dosya ve dizinler mödülünüz için açılacak assets
